@@ -24,7 +24,7 @@ class _EditScreenState extends State<EditScreen> {
     descriptionController = new TextEditingController(text: widget.note.description);
   }
   Future<bool> guardar() async{
-    var url = 'http://192.168.2.101:8085/notes/${widget.note.idNote.toString()}';
+    var url = 'http://192.168.137.1:8085/notes/${widget.note.idNote.toString()}';
     var body = jsonEncode({
     'title': titleController.text.toString(),
     'description':descriptionController.text.toString()});
@@ -63,7 +63,7 @@ class _EditScreenState extends State<EditScreen> {
   }
 
   Future<bool> eliminar() async{
-    var url = 'http://192.168.2.101:8085/notes/${widget.note.idNote.toString()}';
+    var url = 'http://192.168.137.1:8085/notes/${widget.note.idNote.toString()}';
     var response = await http.delete(
       url,
     );

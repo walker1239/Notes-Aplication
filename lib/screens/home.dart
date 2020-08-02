@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
   RandomColor _randomColor;
   Future<List<Notes>> getNotes() async{
     List<Notes> notes = List<Notes>();
-    var url = 'http://192.168.2.101:8085/notes';
+    var url = 'http://192.168.137.1:8085/notes';
     var response = await http.get(url,
     );
     final jsonData = json.decode(response.body);

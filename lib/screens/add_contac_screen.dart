@@ -14,7 +14,7 @@ class _AddScreenState extends State<AddScreen> {
   final titleController= TextEditingController();
   final descriptionController= TextEditingController();
   Future<bool> registrar() async{
-    var url = 'http://192.168.2.101:8085/note';
+    var url = 'http://192.168.137.1:8085/note';
     var body = jsonEncode({
     'title': titleController.text.toString(),
     'description':descriptionController.text.toString()});
